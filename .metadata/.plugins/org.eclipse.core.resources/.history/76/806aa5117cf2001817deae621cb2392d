@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+	
+	<bean id="jugador" class="com.utn.jpy.beans.Jugador" scope="prototype">
+		<property name="nombre" value="Player 1"></property>
+		<property name="arma" ref="cuchillo"></property>
+	</bean>
+	
+	<bean id="espada" class="com.utn.jpy.beans.Espada" name="espada">
+	</bean>
+	
+	<bean id="cuchillo" class="com.utn.jpy.beans.Cuchillo" name="cuchillo">
+	</bean>
+	
+	<bean id="energia" class="com.utn.jpy.beans.Energia" name="energia">
+		<property name="cantidad" value="100"></property>
+		<property name="maximaCan" value="100"></property>
+		<property name="superPoder" value="false"></property>
+	</bean>
+	
+	<alias name="energia" alias="energiaBean"/>
+
+
+
+
+</beans>

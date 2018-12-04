@@ -1,0 +1,5 @@
+package com.utn.jpy.beans;
+
+public class Jugador {
+
+}

@@ -1,0 +1,44 @@
+package com.utn.jpy.Clase01;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.utn.jpy.beans.Cuchillo;
+import com.utn.jpy.beans.Energia;
+import com.utn.jpy.beans.Espada;
+import com.utn.jpy.beans.Jugador;
+
+@Configuration
+public class AppConfig {
+	
+	@Bean
+	public Jugador jugador(){
+		return new Jugador();
+	}
+	
+	@Bean
+	public Espada espada(){
+		return new Espada();
+	}
+	
+	@Bean
+	public Energia energia(){
+		return new Energia();
+	}
+	
+	@Bean
+	public Cuchillo cuchillo(){
+		return new Cuchillo();
+	}
+	
+	@Bean
+	public Jugador jugador(){
+		return new Jugador();
+	}
+	
+	@Bean
+	public Jugador jugador(){
+		return new Jugador();
+	}
+
+}

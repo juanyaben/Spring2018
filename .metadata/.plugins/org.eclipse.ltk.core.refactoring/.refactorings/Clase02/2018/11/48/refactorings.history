@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.utn.jpy.beans.Arma&apos; to &apos;Espada&apos;&#x0D;&#x0A;- Original project: &apos;Clase02&apos;&#x0D;&#x0A;- Original element: &apos;com.utn.jpy.beans.Arma&apos;&#x0D;&#x0A;- Renamed element: &apos;com.utn.jpy.beans.Espada&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Arma&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.utn.jpy.beans{Arma.java[Arma" matchStrategy="1" name="Espada" qualified="false" references="true" similarDeclarations="false" stamp="1543345539166" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,10 @@
+package com.utn.jpy.Clase01;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+	
+	
+
+}

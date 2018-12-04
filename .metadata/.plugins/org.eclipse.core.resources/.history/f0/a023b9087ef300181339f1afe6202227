@@ -1,0 +1,27 @@
+package com.utn.jpy.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.utn.jpy.beans.Persona;
+import com.utn.jpy.dao.PersonaDAO;
+
+public class PersonaServiceImpl implements PersonaService{
+	
+	@Autowired
+	private PersonaDAO personaDao;
+
+	
+	@Override
+	public Persona buscar(int idPersona) throws Exception {
+	
+		Persona persona;
+		
+		persona = personaDao.buscar(2);
+		
+		System.out.println(persona.getNombre());
+		
+		return null;
+	}
+
+	
+}

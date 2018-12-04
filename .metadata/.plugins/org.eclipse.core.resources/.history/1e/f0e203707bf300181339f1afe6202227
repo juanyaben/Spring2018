@@ -1,0 +1,7 @@
+package com.utn.jpy.dao;
+
+public interface PersonaDAO {
+	
+	public Persona buscar(idPersona) throws Exception;
+
+}

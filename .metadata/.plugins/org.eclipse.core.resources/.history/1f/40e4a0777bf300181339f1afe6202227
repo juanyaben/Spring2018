@@ -1,0 +1,9 @@
+package com.utn.jpy.dao;
+
+import com.utn.jpy.beans.Persona;
+
+public interface PersonaDAO {
+	
+	public Persona buscar(int) throws Exception;
+
+}

@@ -1,0 +1,18 @@
+package com.utn.jpy.service;
+
+import java.util.List;
+
+import com.utn.jpy.beans.Persona;
+
+public interface PersonaService {
+	
+	public Persona buscar(int idPersona) throws Exception;
+	
+	public int cantidadDePersonas ();
+	
+	public String getNombrePersona(int idPersona);
+	
+	public Persona buscarPersona(int idPersona) throws Exception;
+	
+	public List<Persona> buscarPersonas() throws Exception;
+}

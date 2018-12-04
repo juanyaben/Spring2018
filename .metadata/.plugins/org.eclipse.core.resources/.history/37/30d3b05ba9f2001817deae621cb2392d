@@ -1,0 +1,32 @@
+package com.utn.jpy.Clase01;
+
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.utn.jpy.beans.Jugador;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/utn/xml/beans.xml");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Juego \n");
+		
+		Jugador jugador = (Jugador) appContext.getBean("jugador");
+		
+		System.out.println("Elija un Arma: 1- Cuchillo , 2- Espada , otro- punio");
+		int opcion = sc.nextInt();
+
+		
+		
+		((ConfigurableApplicationContext)appContext).close();
+		
+	}
+
+}

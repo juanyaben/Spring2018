@@ -1,0 +1,13 @@
+package com.utn.jpy.service;
+
+import com.utn.jpy.beans.Persona;
+
+public class PersonaServiceImpl implements PersonaService{
+
+	@Override
+	public Persona buscar(int idPersona) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

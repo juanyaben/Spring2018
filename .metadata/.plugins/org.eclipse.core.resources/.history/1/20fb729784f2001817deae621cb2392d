@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	
+<!-- 	Resuelve las @Anotaciones que usemos : )  -->
+<!-- 	No todas!!!     algunas propias de Java y algunas de Spring como @Autuwired , @Qualifier -->
+<!-- 	No hace la deteccion de Beans , @Component -->
+	<context:annotation-config></context:annotation-config>
+	
+	
+	<context:component-scan base-package="com.utn.jpy"></context:component-scan>
+	
+
+	<bean id="espada" class="com.utn.jpy.beans.Espada" name="espada">
+		<qualifier value="armaInicial"></qualifier>
+	</bean>
+	
+	<bean id="cuchillo" class="com.utn.jpy.beans.Cuchillo" name="cuchillo"></bean>
+	
+	<bean id="energia" class="com.utn.jpy.beans.Energia" name="energia">
+		<property name="cantidad" value="100"></property>
+		<property name="maximaCan" value="100"></property>
+		<property name="superPoder" value="false"></property>
+	</bean>
+	
+	<alias name="energia" alias="energiaBean"/>
+
+
+
+
+</beans>

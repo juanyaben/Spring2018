@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<context:property-placeholder location="classpath:"
+
+	<bean id="holaMundo" class="com.utn.jpy.beans.HolaMundo">
+		<property name="saludo" value="Hola Mundo desde Spring STS por XML!!!"></property>
+	</bean>
+	
+	<bean id="jugador" class="com.utn.jpy.beans.Jugador" scope="prototype">
+		<property name="nombre" value="Player 1"></property>
+		<property name="arma" ref="arma">	</property>
+		<property name="energia" ref="energia"></property>
+	</bean>
+	
+	<bean id="armasarsa" class="com.utn.jpy.beans.Arma" name="arma">
+		<property name="nombre" value="Espada"></property>
+	</bean>
+	
+	<bean id="energia" class="com.utn.jpy.beans.Energia" name="energia">
+		<property name="cantidad" value="100"></property>
+		<property name="maximaCan" value="100"></property>
+		<property name="superPoder" value="false"></property>
+	</bean>
+	
+	<alias name="energia" alias="energiaBean"/>
+
+	<bean id="jugador2" class="com.utn.jpy.beans.Jugador" scope="prototype">
+		<property name="nombre" value="Player 1"></property>
+		<property name="arma" ref="arma">	</property>
+		<property name="energia" ref="energia"></property>
+	</bean>
+
+
+</beans>

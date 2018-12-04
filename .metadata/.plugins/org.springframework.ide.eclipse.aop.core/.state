@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="ejemploAnotaciones"/>
+<aop-project name="ClaseDos"/>
+<aop-project name="JDBCspringTemplate-2"/>
+<aop-project name="Clase02"/>
+<aop-project name="Juego"/>
+<aop-project name="Clase02mixJuego"/>
+<aop-project name="ejemplo01"/>
+<aop-project name="JDBCspringTemplate"/>
+<aop-project name="Clase02mix"/>
+<aop-project name="JDBCspring"/>
+<aop-project name="JDBCspringXML"/>
+<aop-project name="Clase02anotacionesJuego"/>
+<aop-project name="Clase01"/>
+</aop-reference-model>

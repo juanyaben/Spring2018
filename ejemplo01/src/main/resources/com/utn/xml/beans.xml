@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		
+	<bean id="holaMundo" class="com.utn.beans.HolaMundo">
+		<property name="saludo" value="Hola Mundo desde Spring XML :)"></property>
+	</bean>
+
+	<bean id="persona" class="com.utn.beans.Persona" autowire="byName">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Juan Pablo"></property>
+		<property name="apodo" value="JP"></property>
+	</bean>
+	
+	<bean id="cacho" class="com.utn.beans.Pais" name="pais" autowire="byName">
+		<property name="nombre" value="Argentina"></property>
+	</bean>
+	
+	<bean id="ciudad" class="com.utn.beans.Ciudad">
+		<property name="nombre" value="Buenos Aires"></property>
+	</bean>
+
+<!-- 	<bean id="persona" class="com.utn.beans.Persona"> -->
+<!-- 		<constructor-arg type="int" value="1"></constructor-arg> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="persona" class="com.utn.beans.Persona"> -->
+<!-- 		<constructor-arg index="1" value="Juan Pablo"></constructor-arg> -->
+<!-- 		<constructor-arg index="2" value="JP"></constructor-arg> -->
+<!-- 		<constructor-arg index="0" value="1"></constructor-arg> -->
+<!-- 	</bean> -->
+
+</beans>
+
+
+
+
+
+
+

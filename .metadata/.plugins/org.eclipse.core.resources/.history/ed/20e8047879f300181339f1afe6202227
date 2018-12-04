@@ -1,0 +1,5 @@
+package com.utn.jpy.dao;
+
+public class PersonaDAO {
+
+}

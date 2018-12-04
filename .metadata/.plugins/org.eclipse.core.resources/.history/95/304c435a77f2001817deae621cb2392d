@@ -1,0 +1,7 @@
+package com.utn.jpy.interfaces;
+
+public interface IArma {
+	
+	public Stirng atacar();
+
+}

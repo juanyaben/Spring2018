@@ -1,0 +1,7 @@
+package com.utn.jpy.dao;
+
+public interface PersonaDAO {
+	
+	public void registrar() throws Exception;
+
+}

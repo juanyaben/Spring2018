@@ -1,0 +1,6 @@
+package com.utn.jpy.Clase01;
+
+@Configuration
+public class AppConfig {
+
+}

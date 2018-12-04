@@ -1,0 +1,71 @@
+package com.utn.jpy.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.utn.jpy.beans.Persona;
+
+@Repository
+public class PersonaDAOImpl implements PersonaDAO{
+	
+	@Autowired
+	private DataSource dataSource;
+	private JdbcTemplate jdbcTemplate = new JdbcTemplate();
+
+
+	private Connection con = null;
+	private PreparedStatement stmt = null;
+	
+	
+	@Override
+	public Persona buscar(int idPersona) throws Exception {
+		
+		Persona persona = null;
+			try {
+				
+//				Class.forName("com.mysql.cj.jdbc.Driver");
+//				String url = "jdbc:mysql://localhost:3306/base_de_datos_persona";
+//				con = DriverManager.getConnection(url, "root", "");
+				
+				con = dataSource.getConnection();
+				
+				stmt =con.prepareStatement("SELECT * FROM `personas` WHERE ID= ?");
+				stmt.setInt(1, idPersona);
+				
+				ResultSet rs = stmt.executeQuery();
+				
+					while (rs.next() == true) {
+						int id = rs.getInt("id");
+						String nombre = rs.getString("Nombre");
+						persona = new Persona (id, nombre);
+					}
+					
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		return persona;		
+		
+	}
+	
+	public int cantidadDePersonas (int idPersona){
+		Persona persona = null;
+		String sql = "SELECT * FROM `personas` WHERE ID= ?";
+		stmt.setInt(1, idPersona);
+		jdbcTemplate.setDataSource(dataSource);
+		persona = jdbcTemplate.queryForObject(sql, Persona.class);
+		return cuenta.intValue();
+	}
+
+	
+	
+
+}

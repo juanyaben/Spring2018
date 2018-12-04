@@ -1,0 +1,10 @@
+package com.utn.jpy.beans;
+
+public class Jugador {
+	
+	private int id;
+	private String nombre;
+	IArma arma;
+	Energia energia;
+
+}
